@@ -1,8 +1,6 @@
+import { site } from "../data/site";
+
 function Announcement() {
-  return (
-    <div className="ann-bar">
-      Your daily glow ritual · Ships across India
-    </div>
-  );
+  return <div className="ann-bar">{site.announcement}</div>;
 }
 export default Announcement;

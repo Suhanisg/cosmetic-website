@@ -1,19 +1,7 @@
-import Announcement from "../components/Announcement";
-import Header from "../components/Header";
-import Gallery from "../components/Gallery";
-import ProductInfo from "../components/ProductInfo";
-import "./Landing.css";
+import ProductPage from "./ProductPage";
 
+// Instagram ad wala main product
 function Landing() {
-  return (
-    <div className="lp-page">
-      <Announcement />
-      <Header />
-      <main className="lp-product-layout">
-        <Gallery />
-        <ProductInfo />
-      </main>
-    </div>
-  );
+  return <ProductPage productId="premium-sindoor" />;
 }
 export default Landing;

@@ -6,8 +6,11 @@
   --text: #2C211E;
   --text-soft: #6B5E57;
   --gold: #C99B6A;
+    --gold-dark: #A8794A;
+  --gold-light: #E3C39A;
   --sage: #A4AA97;
   --blush: #F1E3E0;
+  --shade:#ebcfc9;
   --white: #FFFFFF;
 
   --font-heading: "Playfair Display", Georgia, serif;
@@ -36,20 +39,45 @@ button {
   cursor: pointer;
 }
 /* Shared buttons (har page pe use honge) */
+/* Shared buttons (har page pe use honge) */
 .yo-btn {
   flex: 1;
   height: 52px;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 600;
+  padding: 0 18px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+.yo-btn:hover {
+  transform: translateY(-2px);
+}
+.yo-btn:active {
+  transform: translateY(0);
+}
+
+/* Maroon button, gold border + andar ki patli gold line */
+.yo-btn--primary {
+  background: linear-gradient(180deg, #7C2A3A, var(--maroon));
+  color: var(--white);
+  border: 1.5px solid var(--gold);
+  box-shadow: inset 0 0 0 2px var(--maroon), inset 0 0 0 3px var(--gold-light),
+    0 6px 14px rgba(110, 35, 49, 0.25);
+}
+
+/* Gold gradient button, dark-gold border */
+.yo-btn--gold {
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  color: var(--maroon);
+  border: 1.5px solid var(--gold-dark);
+  box-shadow: 0 6px 14px rgba(168, 121, 74, 0.28);
+}
+
+/* White button, maroon border (baad mein kaam aayega) */
 .yo-btn--outline {
   background: var(--white);
   color: var(--maroon);
-  border: 1.5px solid var(--maroon);
-}
-.yo-btn--primary {
-  background: var(--maroon);
-  color: var(--white);
   border: 1.5px solid var(--maroon);
 }
